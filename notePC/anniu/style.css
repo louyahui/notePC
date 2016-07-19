@@ -1,0 +1,108 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-06-07 23:13:52
+ * @version $Id$
+ */
+*{
+    padding: 0;
+    margin:0;
+
+}
+body{
+    background:#333;
+
+}
+.box{
+    width: 1000px;
+    height: 280px;
+    margin: 50px auto;
+}
+.box .link {
+    width: 205px;
+    height: 280px;
+    margin: 0 20px;
+    float: left;
+}
+.link .icon  {
+    display: inline-block;
+    width: 100%;
+    height: 190px;
+
+    transition: 0.2s linear ;
+}
+.link-miss .icon{
+    background: url("mission.png") no-repeat center center;
+}
+.link-play .icon{
+    background: url("play.png") no-repeat center center;
+}
+.link-touch .icon{
+    background: url("touch.png") no-repeat center center;
+}
+/*Transform属性应用于元素的2D或3D转换。
+//这个属性允许你将元素旋转，缩放，移动，倾斜等*/
+/*
+值   描述
+none    定义不进行转换。
+matrix(n,n,n,n,n,n)     定义 2D 转换，使用六个值的矩阵。
+matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)   定义 3D 转换，使用 16 个值的 4x4 矩阵。
+translate(x,y)  定义 2D 转换。
+translate3d(x,y,z)  定义 3D 转换。
+translateX(x)   定义转换，只是用 X 轴的值。
+translateY(y)   定义转换，只是用 Y 轴的值。
+translateZ(z)   定义 3D 转换，只是用 Z 轴的值。
+scale(x[,y]?)   定义 2D 缩放转换。
+scale3d(x,y,z)  定义 3D 缩放转换。
+scaleX(x)   通过设置 X 轴的值来定义缩放转换。
+scaleY(y)   通过设置 Y 轴的值来定义缩放转换。
+scaleZ(z)   通过设置 Z 轴的值来定义 3D 缩放转换。
+rotate(angle)   定义 2D 旋转，在参数中规定角度。
+rotate3d(x,y,z,angle)   定义 3D 旋转。
+rotateX(angle)  定义沿着 X 轴的 3D 旋转。    测试
+rotateY(angle)  定义沿着 Y 轴的 3D 旋转。
+rotateZ(angle)  定义沿着 Z 轴的 3D 旋转。
+skew(x-angle,y-angle)   定义沿着 X 和 Y 轴的 2D 倾斜转换。
+skewX(angle)    定义沿着 X 轴的 2D 倾斜转换。
+skewY(angle)    定义沿着 Y 轴的 2D 倾斜转换。
+perspective(n)  为 3D 转换元素定义透视视图。
+ */
+.link .icon:hover{
+    transform: rotate(360deg) scale(1.2);
+    -moz-transform: rotate(360deg) scale(1.2);
+    /*-webkit-transform: rotate(360deg) scale(1.2);*/
+}
+/*
+transition属性是一个速记属性有四个属性：transition-property, 
+transition-duration, transition-timing-function, 
+ and transition-delay。
+ 
+值                       描述
+transition-property     指定CSS属性的name，transition效果
+transition-duration     transition效果需要指定多少秒或毫秒才能完成
+transition-timing-function  指定transition效果的转速曲线
+transition-delay    定义transition效果开始的时候
+ */
+.button{
+    display: block;
+    width: 180px;
+    height: 50px;
+    text-decoration: none;;
+    line-height: 50px;
+    color: #2dcb70;
+    font-family: "微软雅黑",arial,helvetica,sans-serif;
+    font-weight: bolder;
+    border:2px solid rgba(255,255,255,0.8);
+    padding-left: 20px;
+    margin: 0 auto;
+    /*box-sizing 属性允许你以某种方式定义某些元素，以适应指定区域。*/
+    /*
+     值  说明
+    content-box     这是CSS2.1指定的宽度和高度的行为。指定元素的宽度和高度（最小/最大属性）适用于box的宽度和高度。元素的填充和边框布局和绘制指定宽度和高度除外
+    border-box  指定宽度和高度（最小/最大属性）确定元素边框box。也就是说，对元素指定宽度和高度包括padding和border的指定。内容的宽度和高度减去各自双方该边框和填充的宽度从指定的"宽度"和"高度"属性计算
+    inherit     指定box-sizing属性的值，应该从父元素继承
+     */
+    box-sizing: border-box;
+    background:url("allow.png") no-repeat 130px center;
+}
